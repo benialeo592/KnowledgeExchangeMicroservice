@@ -1,8 +1,10 @@
 package com.beniaminoleone.availability.mapper;
 
-import com.beniaminoleone.availability.dto.AvailabilityRequestDto;
-import com.beniaminoleone.availability.dto.AvailabilityResponseDto;
 import com.beniaminoleone.availability.entity.AvailabilityEntity;
+
+
+import com.beniaminoleone.library.dto.AvailabilityRequestDto;
+import com.beniaminoleone.library.dto.AvailabilityResponseDto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

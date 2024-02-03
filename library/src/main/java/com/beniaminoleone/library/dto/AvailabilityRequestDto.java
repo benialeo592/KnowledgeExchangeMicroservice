@@ -1,16 +1,27 @@
-package com.beniaminoleone.availability.dto;
+package com.beniaminoleone.library.dto;
 
-import com.mongodb.lang.NonNull;
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class AvailabilityRequestDto {
 
+public class AvailabilityRequestDto {
     private Long teacherId;
     private LocalDate date;
     private LocalTime time;
     private String genre;
+
+    public AvailabilityRequestDto() {
+    }
+
+    public AvailabilityRequestDto(Long teacherId, LocalDate date, LocalTime time, String genre) {
+        this.teacherId = teacherId;
+        this.date = date;
+        this.time = time;
+        this.genre = genre;
+    }
+
 
     public Long getTeacherId() {
         return teacherId;

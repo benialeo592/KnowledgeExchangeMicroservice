@@ -1,7 +1,9 @@
 package com.beniaminoleone.availability.service.inteface;
 
-import com.beniaminoleone.availability.dto.AvailabilityRequestDto;
-import com.beniaminoleone.availability.dto.AvailabilityResponseDto;
+
+
+import com.beniaminoleone.library.dto.AvailabilityRequestDto;
+import com.beniaminoleone.library.dto.AvailabilityResponseDto;
 
 import java.util.List;
 

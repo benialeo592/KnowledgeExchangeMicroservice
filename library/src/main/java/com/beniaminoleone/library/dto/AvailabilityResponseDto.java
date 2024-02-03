@@ -1,10 +1,9 @@
-package com.beniaminoleone.availability.dto;
+package com.beniaminoleone.library.dto;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class AvailabilityResponseDto {
-
     private String id;
     private LocalDate date;
     private LocalTime time;

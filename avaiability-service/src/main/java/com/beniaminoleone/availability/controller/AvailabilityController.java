@@ -1,10 +1,12 @@
 package com.beniaminoleone.availability.controller;
 
-import com.beniaminoleone.availability.dto.AvailabilityRequestDto;
-import com.beniaminoleone.availability.dto.AvailabilityResponseDto;
+
 import com.beniaminoleone.availability.service.inteface.AvailabilityService;
+import com.beniaminoleone.library.dto.AvailabilityRequestDto;
+import com.beniaminoleone.library.dto.AvailabilityResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -12,7 +14,7 @@ import java.util.List;
 public class AvailabilityController {
     private AvailabilityService availabilityService;
 
-    AvailabilityController(AvailabilityService availabilityService){
+    public AvailabilityController(AvailabilityService availabilityService){
         this.availabilityService = availabilityService;
     }
 
@@ -30,6 +32,7 @@ public class AvailabilityController {
     public ResponseEntity<Boolean> destroyTeacherAvailability(@PathVariable String availabilityId){
         return ResponseEntity.ok().body(this.availabilityService.deleteAvailability(availabilityId));
     }
+
 
 
 }

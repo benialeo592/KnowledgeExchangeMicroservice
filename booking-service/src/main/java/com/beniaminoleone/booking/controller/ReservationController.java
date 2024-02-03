@@ -6,6 +6,7 @@ import com.beniaminoleone.booking.service.inteface.ReservationService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -58,6 +59,12 @@ public class ReservationController {
     public ResponseEntity<Boolean> destroyReservation(@PathVariable Long id){
         return ResponseEntity.ok().body(this.reservationService.destroyReservation(id));
     }
+
+    @PostMapping("/upload")
+    public void test(@RequestParam("file") MultipartFile[] file){
+        System.out.println(file);
+    }
+
 
 
 
