@@ -1,8 +1,8 @@
 package com.beniaminoleone.booking.service.implementation;
 
 import com.beniaminoleone.booking.client.AvailabilityClient;
-import com.beniaminoleone.booking.dto.ReservationRequestDto;
-import com.beniaminoleone.booking.dto.ReservationResponseDto;
+import com.beniaminoleone.library.dto.ReservationRequestDto;
+import com.beniaminoleone.library.dto.ReservationResponseDto;
 import com.beniaminoleone.booking.entity.ReservationEntity;
 import com.beniaminoleone.booking.mapper.ReservationMapper;
 import com.beniaminoleone.booking.repository.ReservationRepository;
@@ -113,12 +113,11 @@ public class ReservationServiceImpl implements ReservationService {
        ReservationEntity reservation = this.reservationMapper.toEntity(reservationRequest);
        reservation.setReservationCode(this.generateReservationCode());
 
-      Boolean isDeletedFromService = null;
-            //  webClientBuilder.build().delete()
-           //    .uri("http://availability-service/api/v1/availability/" + foundAvailability.getId())
-           //    .retrieve()
-           //   .bodyToMono(Boolean.class)
-           //     .block();
+      Boolean isDeletedFromService = webClientBuilder.build().delete()
+              .uri("http://availability-service/api/v1/availability/" + foundAvailability.getId())
+              .retrieve()
+              .bodyToMono(Boolean.class)
+              .block();
 
         if(isDeletedFromService == null || !isDeletedFromService){
            throw new RuntimeException("Something wrong...");

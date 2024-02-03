@@ -1,6 +1,5 @@
-package com.beniaminoleone.booking.dto;
+package com.beniaminoleone.library.dto;
 
-import com.beniaminoleone.booking.entity.UserEntity;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -18,10 +17,10 @@ public class ReservationRequestDto {
     private LocalTime reservationTime;
     @NotBlank
     @NotNull
-    private UserEntity student;
+    private UserModel student;
     @NotBlank
     @NotNull
-    private UserEntity teacher;
+    private UserModel teacher;
 
     public LocalDate getReservationDate() {
         return reservationDate;
@@ -39,19 +38,19 @@ public class ReservationRequestDto {
         this.reservationTime = reservationTime;
     }
 
-    public UserEntity getStudent() {
+    public UserModel getStudent() {
         return student;
     }
 
-    public void setStudent(UserEntity student) {
+    public void setStudent(UserModel student) {
         this.student = student;
     }
 
-    public UserEntity getTeacher() {
+    public UserModel getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(UserEntity teacher) {
+    public void setTeacher(UserModel teacher) {
         this.teacher = teacher;
     }
 }

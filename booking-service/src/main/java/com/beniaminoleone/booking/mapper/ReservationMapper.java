@@ -1,8 +1,8 @@
 package com.beniaminoleone.booking.mapper;
 
 
-import com.beniaminoleone.booking.dto.ReservationRequestDto;
-import com.beniaminoleone.booking.dto.ReservationResponseDto;
+import com.beniaminoleone.library.dto.ReservationRequestDto;
+import com.beniaminoleone.library.dto.ReservationResponseDto;
 import com.beniaminoleone.booking.entity.ReservationEntity;
 import org.mapstruct.Mapper;
 

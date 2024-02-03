@@ -1,8 +1,8 @@
 package com.beniaminoleone.booking.service.inteface;
 
 
-import com.beniaminoleone.booking.dto.UserRequestDto;
-import com.beniaminoleone.booking.dto.UserResponseDto;
+import com.beniaminoleone.library.dto.UserRequestDto;
+import com.beniaminoleone.library.dto.UserResponseDto;
 
 import java.util.List;
 

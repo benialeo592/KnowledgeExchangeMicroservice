@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-03T12:18:47+0100",
+    date = "2024-02-03T17:27:46+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.8 (Oracle Corporation)"
 )
 @Component
@@ -22,6 +22,11 @@ public class AvailabilityMapperImpl implements AvailabilityMapper {
 
         AvailabilityResponseDto availabilityResponseDto = new AvailabilityResponseDto();
 
+        availabilityResponseDto.setId( availability.getId() );
+        availabilityResponseDto.setDate( availability.getDate() );
+        availabilityResponseDto.setTime( availability.getTime() );
+        availabilityResponseDto.setGenre( availability.getGenre() );
+
         return availabilityResponseDto;
     }
 
@@ -32,6 +37,11 @@ public class AvailabilityMapperImpl implements AvailabilityMapper {
         }
 
         AvailabilityEntity availabilityEntity = new AvailabilityEntity();
+
+        availabilityEntity.setTeacherId( request.getTeacherId() );
+        availabilityEntity.setDate( request.getDate() );
+        availabilityEntity.setTime( request.getTime() );
+        availabilityEntity.setGenre( request.getGenre() );
 
         return availabilityEntity;
     }

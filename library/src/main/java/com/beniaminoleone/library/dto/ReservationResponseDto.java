@@ -1,7 +1,8 @@
-package com.beniaminoleone.booking.dto;
+package com.beniaminoleone.library.dto;
 
-import com.beniaminoleone.booking.entity.UserEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 
 import java.time.LocalDate;
@@ -15,10 +16,8 @@ public class ReservationResponseDto {
 
     private LocalTime reservationTime;
     private String reservationCode;
-    @JsonIgnore
-    private UserEntity student;
-
-    private UserEntity teacher;
+    private UserModel student;
+    private UserModel teacher;
 
     public Long getId() {
         return id;
@@ -52,19 +51,19 @@ public class ReservationResponseDto {
         this.reservationCode = reservationCode;
     }
 
-    public UserEntity getStudent() {
+    public UserModel getStudent() {
         return student;
     }
 
-    public void setStudent(UserEntity student) {
-        this.student = student;
+    public void setStudent(UserModel student) {
+        this.student= student;
     }
 
-    public UserEntity getTeacher() {
+    public UserModel getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(UserEntity teacher) {
+    public void setTeacher(UserModel teacher) {
         this.teacher = teacher;
     }
 }

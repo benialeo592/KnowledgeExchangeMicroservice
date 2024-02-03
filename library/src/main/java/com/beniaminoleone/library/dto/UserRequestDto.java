@@ -1,21 +1,30 @@
-package com.beniaminoleone.booking.dto;
+package com.beniaminoleone.library.dto;
 
-import com.beniaminoleone.booking.entity.RoleEntity;
+import jakarta.validation.constraints.*;
 
 
-public class UserResponseDto {
+public class UserRequestDto {
 
-    private Long id;
+    @NotBlank
+    @NotNull
+    @Email
     private String email;
+    @NotBlank
+    @NotNull
+    @Size(max = 16, min = 6)
     private String password;
+    @NotBlank
+    @NotNull
     private String firstname;
+    @NotBlank
+    @NotNull
     private String lastname;
-    private Integer age;
-    private RoleEntity roleEntity;
 
-    public Long getId() {
-        return id;
-    }
+    @NotNull
+    private Integer age;
+
+    @NotNull
+    private RoleModel role;
 
     public String getEmail() {
         return email;
@@ -37,8 +46,8 @@ public class UserResponseDto {
         return age;
     }
 
-    public RoleEntity getRoleEntity() {
-        return roleEntity;
+    public RoleModel getRoleModel() {
+        return role;
     }
 
     public void setEmail(String email) {
@@ -61,7 +70,19 @@ public class UserResponseDto {
         this.age = age;
     }
 
-    public void setRoleEntity(RoleEntity roleEntity) {
-        this.roleEntity = roleEntity;
+    public void setRoleModel(RoleModel role) {
+        this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "UserRequestDto{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", age=" + age +
+                ", role=" + role +
+                '}';
     }
 }

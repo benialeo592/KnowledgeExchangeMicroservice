@@ -1,8 +1,9 @@
 package com.beniaminoleone.booking.service.implementation;
 
 
-import com.beniaminoleone.booking.dto.UserRequestDto;
-import com.beniaminoleone.booking.dto.UserResponseDto;
+import com.beniaminoleone.booking.mapper.RoleMapper;
+import com.beniaminoleone.library.dto.UserRequestDto;
+import com.beniaminoleone.library.dto.UserResponseDto;
 import com.beniaminoleone.booking.repository.UserRepository;
 import com.beniaminoleone.booking.entity.UserEntity;
 import com.beniaminoleone.booking.mapper.UserMapper;
@@ -17,10 +18,12 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepo;
     private final UserMapper userMapper;
+    private final RoleMapper roleMapper;
 
-    public UserServiceImpl(UserRepository userRepo, UserMapper userMapper){
+    public UserServiceImpl(UserRepository userRepo, UserMapper userMapper, RoleMapper roleMapper){
         this.userRepo = userRepo;
         this.userMapper = userMapper;
+        this.roleMapper = roleMapper;
     }
 
     @Override
@@ -52,7 +55,7 @@ public class UserServiceImpl implements UserService {
         newUser.setFirstname(user.getFirstname());
         newUser.setLastname(user.getLastname());
         newUser.setPassword(user.getPassword());
-        newUser.setRoleEntity(user.getRoleEntity());
+        newUser.setRoleEntity(this.roleMapper.toEntity(user.getRoleModel()));
         newUser.setAge(user.getAge());
         newUser = this.userRepo.save(newUser);
         return this.userMapper.userToDto(newUser);
@@ -69,7 +72,7 @@ public class UserServiceImpl implements UserService {
         UserEntity foundUser = this.userRepo.findByEmail(userEmail).orElseThrow(()-> new RuntimeException("User not Found"));
         foundUser.setEmail(user.getEmail());
         foundUser.setAge(user.getAge());
-        foundUser.setRoleEntity(user.getRoleEntity());
+        foundUser.setRoleEntity(this.roleMapper.toEntity(user.getRoleModel()));
         foundUser.setFirstname(user.getFirstname());
         foundUser.setLastname(user.getLastname());
         foundUser = this.userRepo.save(foundUser);

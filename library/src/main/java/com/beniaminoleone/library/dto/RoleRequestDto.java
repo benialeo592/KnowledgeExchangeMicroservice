@@ -1,4 +1,4 @@
-package com.beniaminoleone.booking.dto;
+package com.beniaminoleone.library.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

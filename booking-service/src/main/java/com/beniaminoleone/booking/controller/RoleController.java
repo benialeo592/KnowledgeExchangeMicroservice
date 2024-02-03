@@ -1,7 +1,7 @@
 package com.beniaminoleone.booking.controller;
 
-import com.beniaminoleone.booking.dto.RoleRequestDto;
-import com.beniaminoleone.booking.dto.RoleResponseDto;
+import com.beniaminoleone.library.dto.RoleRequestDto;
+import com.beniaminoleone.library.dto.RoleResponseDto;
 import com.beniaminoleone.booking.service.inteface.RoleService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

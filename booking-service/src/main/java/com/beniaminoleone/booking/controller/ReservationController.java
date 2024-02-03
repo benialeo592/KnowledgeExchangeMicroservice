@@ -1,7 +1,7 @@
 package com.beniaminoleone.booking.controller;
 
-import com.beniaminoleone.booking.dto.ReservationRequestDto;
-import com.beniaminoleone.booking.dto.ReservationResponseDto;
+import com.beniaminoleone.library.dto.ReservationRequestDto;
+import com.beniaminoleone.library.dto.ReservationResponseDto;
 import com.beniaminoleone.booking.service.inteface.ReservationService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;

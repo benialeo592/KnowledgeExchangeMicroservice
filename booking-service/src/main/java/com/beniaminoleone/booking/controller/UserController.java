@@ -1,7 +1,7 @@
 package com.beniaminoleone.booking.controller;
 
-import com.beniaminoleone.booking.dto.UserRequestDto;
-import com.beniaminoleone.booking.dto.UserResponseDto;
+import com.beniaminoleone.library.dto.UserRequestDto;
+import com.beniaminoleone.library.dto.UserResponseDto;
 import com.beniaminoleone.booking.service.inteface.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

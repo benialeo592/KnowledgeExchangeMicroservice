@@ -1,4 +1,4 @@
-package com.beniaminoleone.booking.dto;
+package com.beniaminoleone.library.dto;
 
 public class RoleResponseDto {
 

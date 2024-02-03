@@ -1,8 +1,8 @@
 package com.beniaminoleone.booking.service.implementation;
 
-import com.beniaminoleone.booking.dto.RoleResponseDto;
+import com.beniaminoleone.library.dto.RoleResponseDto;
 import com.beniaminoleone.booking.repository.RoleRepository;
-import com.beniaminoleone.booking.dto.RoleRequestDto;
+import com.beniaminoleone.library.dto.RoleRequestDto;
 import com.beniaminoleone.booking.entity.RoleEntity;
 import com.beniaminoleone.booking.mapper.RoleMapper;
 import com.beniaminoleone.booking.service.inteface.RoleService;

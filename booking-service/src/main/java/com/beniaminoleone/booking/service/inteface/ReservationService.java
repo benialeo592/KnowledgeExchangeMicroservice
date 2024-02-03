@@ -1,7 +1,7 @@
 package com.beniaminoleone.booking.service.inteface;
 
-import com.beniaminoleone.booking.dto.ReservationRequestDto;
-import com.beniaminoleone.booking.dto.ReservationResponseDto;
+import com.beniaminoleone.library.dto.ReservationRequestDto;
+import com.beniaminoleone.library.dto.ReservationResponseDto;
 
 import java.time.LocalDate;
 import java.util.List;
